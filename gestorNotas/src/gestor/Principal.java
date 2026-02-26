@@ -11,7 +11,7 @@ public class Principal {
 
         int opcion = 0;
 
-        while (opcion != 6) {
+        while (opcion != 7) {
             System.out.println("===== Gestor de Notas =====");
             System.out.println("1. Añadir nota");
             System.out.println("2. Mostrar promedio");

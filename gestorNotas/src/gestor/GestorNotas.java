@@ -10,9 +10,19 @@ public class GestorNotas {
         contador = 0;
     }
 
+  
     public void agregarNota(double nota) {
-        notas[contador] = nota;
-        contador++;
+
+        if (nota < 0 || nota > 10) {
+           System.out.println("Nota 0 eta 10 artean egon behar da.");;
+        }
+
+        if (contador < notas.length) {
+            notas[contador] = nota;
+            contador++;
+        } else {
+            System.out.println("Ez dago lekurik nota gehiagorako.");
+        }
     }
 
     public double calcularPromedio() {
@@ -79,9 +89,6 @@ public class GestorNotas {
                 suspensos++;
             }
 
-            if (notas[i] < 0 || notas[i] > 10) {
-                return "Existen notas fuera de rango.";
-            }
         }
 
         double promedio = suma / contador;
