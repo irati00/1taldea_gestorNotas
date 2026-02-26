@@ -17,7 +17,7 @@ public class GestorNotas {
 
     public double calcularPromedio() {
         double suma = 0;
-        for (int i = 0; i < notas.length; i++) {
+        for (int i = 0; i < contador; i++) {
             suma += notas[i];
         }
         return suma / notas.length;
